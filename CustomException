@@ -1,0 +1,17 @@
+class Processor extends Exception{
+    //call super classs constructor by super keyword
+    Processor(String s){
+        super(s);
+    }
+}
+
+public class HelloWorld{
+
+     public static void main(String []args){ 
+         try{
+             throw new Processor("hello this is my exception");
+         }catch(Processor p){
+            p.printStackTrace();// this line is also madetory
+         }
+     }
+}
