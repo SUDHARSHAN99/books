@@ -1,0 +1,59 @@
+import java.util.Map;
+import java.util.Set;
+import java.util.HashMap;
+import java.util.Random;
+import java.util.Iterator;
+import java.util.Collections;
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        Map<Employee,String> mp  =  new HashMap<>();
+        
+        Employee e1 = new Employee("asr",10);
+        Employee e2 = new Employee("asr",10);
+     
+        mp.put(e1,"asr");
+        mp.put(e2,"avsr");
+        Map<Integer,String> map  =  new HashMap<>();
+        Integer a =1;
+        Integer b = new Integer(1);
+         map.put(a,"asr");
+         map.put(b,"avsr");
+        
+        Set set = mp.keySet();
+         
+        Iterator keySetIterator = set.iterator();
+         
+        while (keySetIterator.hasNext()) 
+        {
+            Object key = keySetIterator.next();
+             
+            System.out.println(key+"  : "+mp.get(key));
+        }
+        
+        Set set1 = map.keySet();
+         
+        Iterator keySetIterator1 = set1.iterator();
+         
+        while (keySetIterator1.hasNext()) 
+        {
+            Object key = keySetIterator1.next();
+             
+            System.out.println(key+"  : "+map.get(key));
+        }
+        
+     }
+}
+
+class Employee{
+    
+    String name;
+    int price;
+    
+    public Employee(String name, int price){
+        this.name = name;
+        this.price = price;
+    }
+    
+}
